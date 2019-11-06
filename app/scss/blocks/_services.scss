@@ -1,0 +1,47 @@
+.services {
+    background: $gray-bg;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__item {
+        max-width: 300px;
+        border: 2px solid #ffffff;
+    }
+}
+
+.service {
+    padding: 40px 25px 40px;
+    text-align: center;
+    transition: 0.5s;
+    &:hover {
+        background: $white;
+    }
+    &__image {
+        margin-bottom: 30px;
+
+    }
+    &__title {
+        display: block;
+        @include medium;
+        font-size: 15px;
+        color: $text-color;
+        text-decoration: underline;      
+    }
+}
+
+@media (max-width: 992px) {
+    .services {
+        &-list {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            margin-bottom: 20px;
+            &:hover {
+                margin-bottom: 0;
+            }
+        }
+    }    
+}

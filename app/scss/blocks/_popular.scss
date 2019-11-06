@@ -1,0 +1,20 @@
+.popular-goods {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+        max-width: 220px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .popular-goods {
+        justify-content: center;
+        flex-basis: 50%;
+        &__item {
+            margin: 0 15px 30px;
+            flex-basis: 50%;
+        }        
+    }
+}

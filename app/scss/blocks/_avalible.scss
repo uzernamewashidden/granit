@@ -1,0 +1,88 @@
+.avalible {
+    &__goods {
+        max-width: 300px;
+    }
+}
+.goods {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    &-item {
+        position: relative;
+        border: 2px solid $border-color;
+        text-align: center;
+        padding: 35px 25px;      
+        &__image {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            @include medium;
+            text-decoration: underline;
+            color: $text-color;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 20px;
+            &_small {
+                @include regular;
+                font-size: 13px;
+                margin-bottom: 25px;
+            }           
+        }
+
+        &__text {
+            @include light;
+            font-size: 13px;
+            color: $goods-text;
+            margin-bottom: 25px;            
+        }
+
+        &__price {
+            @include medium;
+            font-size: 16px;
+            color: $text-color;
+            margin-bottom: 30px;
+            &_old-price {
+                @include regular;
+                color: $light-text-color;
+                font-size: 10px;
+                text-decoration: line-through;
+            }
+            &_new-price {
+                color: $red;
+            }
+        }
+
+        &__button {
+            min-width: 180px;
+        }
+
+        &__sale {
+            @include medium;
+            font-size: 10px;
+            color: $white;
+            text-transform: uppercase;
+            padding: 8px 10px 5px;
+            background: $red;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .avalible__goods {
+        margin: 0 15px 30px;
+    }
+
+    .avalible__goods:last-child {
+        margin-bottom: 0;
+    }
+
+    .goods {
+        justify-content: space-around;
+    }
+}

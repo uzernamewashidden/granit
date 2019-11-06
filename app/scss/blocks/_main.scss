@@ -1,0 +1,57 @@
+.main {
+    background: url("../img/main-bg.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 550px;
+
+    &-content {
+        padding-top: 170px;
+        color: $white;
+        
+
+        &__title {
+            @include bold;            
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &__text {
+            @include regular;
+            font-size: 14px;
+            line-height: 22px;
+            max-width: 240px;
+            margin-bottom: 65px;
+        }
+
+        &__link {
+            @include medium;
+            color: $white;
+            font-size: 12px;
+            text-decoration: underline;
+            margin-left: 15px;
+        }
+
+        &__button {
+            margin-right: 15px;
+        }
+    }
+}
+
+.button {
+    @include medium;
+    font-size: 12px;
+    color: $button-text;
+    background: $main-color;
+    padding: 20px 30px;
+    transition: 0.5s;
+    &:hover {
+        cursor: pointer;
+        filter: brightness(110%);
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content__button {
+        display: block;
+        margin-bottom: 30px;
+    }
+}
